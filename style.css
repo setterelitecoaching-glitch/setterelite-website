@@ -360,3 +360,58 @@ ul { list-style: none; }
     .cta-box { padding: 32px 22px; }
     body { padding-bottom: 80px; }
 }
+
+/* ===== CURRICULUM (6 levels) ===== */
+.cur-levels { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.cur-level {
+    display: grid; grid-template-columns: 90px 1fr; gap: 24px; align-items: start;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+    padding: 30px 32px; transition: var(--transition);
+}
+.cur-level:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.cur-level-num {
+    font-family: var(--font-display); font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em;
+    color: transparent; -webkit-text-stroke: 1px rgba(216,200,168,0.4); line-height: 1;
+}
+.cur-level-tag { display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.cur-level-body h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
+.cur-level-body p { color: var(--text-secondary); font-size: 14.5px; }
+@media (max-width: 960px) {
+    .cur-level { grid-template-columns: 64px 1fr; gap: 18px; padding: 24px; }
+    .cur-level-num { font-size: 2.1rem; }
+}
+
+/* ===== Inline resultaat-context ===== */
+.result-note { margin-top: 12px; font-size: 12.5px; color: var(--text-muted); line-height: 1.5; font-style: italic; }
+
+/* Coach trackrecord (uitklapbaar cv) */
+.sc-coach-track { margin-top: 1.25rem; text-align: left; }
+.sc-coach-track summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; font-size: .9rem; color: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: .55rem 1.1rem; transition: border-color .2s, background .2s; }
+.sc-coach-track summary::-webkit-details-marker { display: none; }
+.sc-coach-track summary::after { content: "\2192"; transition: transform .2s; }
+.sc-coach-track[open] summary::after { transform: rotate(90deg); }
+.sc-coach-track summary:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+.sc-track-list { margin: 1rem 0 0; padding: 1rem 1.25rem; list-style: none; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: rgba(255,255,255,.03); display: grid; gap: .75rem; }
+.sc-track-list li { font-size: .92rem; line-height: 1.5; color: rgba(255,255,255,.78); }
+.sc-track-year { display: block; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: .15rem; }
+
+/* Gastsprekers foto-rij */
+.sc-speakers { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.1rem; }
+.sc-speaker { margin: 0; display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+.sc-speaker img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06); }
+.sc-speaker figcaption { font-size: .75rem; color: rgba(255,255,255,.6); }
+
+/* Praktijkfoto in calltype-kaart */
+.sc-calltype-photo { margin: 1.1rem 0 0; }
+.sc-calltype-photo img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); display: block; }
+.sc-calltype-photo figcaption { font-size: .75rem; color: rgba(255,255,255,.55); margin-top: .45rem; }
+
+/* Placeholder zolang een foto nog niet is aangeleverd */
+.sc-photo-missing img { display: none; }
+.sc-photo-missing::before { content: "Foto volgt"; display: flex; align-items: center; justify-content: center; height: 90px; border: 1px dashed rgba(255,255,255,.25); border-radius: 12px; color: rgba(255,255,255,.4); font-size: .8rem; }
+
+/* Event aftermovie */
+.sc-event-video { margin: 0 auto 2rem; max-width: 720px; }
+.sc-event-video video { width: 100%; border-radius: 16px; border: 1px solid rgba(255,255,255,.12); display: block; background: #000; }
+.sc-event-video figcaption { font-size: .8rem; color: rgba(255,255,255,.55); margin-top: .5rem; text-align: center; }
+.sc-event-video.sc-photo-missing video { display: none; }
