@@ -71,3 +71,5 @@
     .ty-trustpilot { padding: 40px 24px; }
     body { padding-bottom: 0; }
 }
+
+.ty-testimonial-note { display: block; margin-top: 10px; font-size: 11.5px; color: var(--text-muted); line-height: 1.4; }
