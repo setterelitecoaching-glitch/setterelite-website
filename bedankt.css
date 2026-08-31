@@ -42,7 +42,9 @@
 .video-frame-portrait .video-play svg { width: 22px; height: 22px; }
 
 /* ===== Testimonials ===== */
-.ty-testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 240px)); justify-content: center; gap: 22px; max-width: 1040px; margin: 0 auto; }
+.ty-testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 240px)); justify-content: center; gap: 22px; max-width: 1040px; margin: 0 auto; align-items: stretch; }
+.ty-testimonial { display: flex; flex-direction: column; }
+.ty-testimonial .video-frame { margin-top: auto; }
 .ty-testimonial h4 { font-family: var(--font-display); font-size: 16px; font-weight: 600; margin: 0 0 4px; }
 .ty-testimonial-caption { margin: 0 0 12px; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
 
