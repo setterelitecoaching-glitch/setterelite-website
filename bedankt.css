@@ -26,7 +26,7 @@
     position: absolute; inset: 0; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 6px; text-align: center;
     background:
-        radial-gradient(ellipse at center, rgba(216,200,168,0.07), transparent 70%),
+        radial-gradient(ellipse at center, rgba(46,155,238,0.07), transparent 70%),
         var(--bg-card);
 }
 .video-play {
@@ -54,7 +54,7 @@
 .ty-trustpilot::before {
     content: ''; position: absolute; top: -60%; left: 50%; transform: translateX(-50%);
     width: 520px; height: 520px; pointer-events: none;
-    background: radial-gradient(circle, rgba(216,200,168,0.1), transparent 65%);
+    background: radial-gradient(circle, rgba(46,155,238,0.1), transparent 65%);
 }
 .tp-stars { display: flex; justify-content: center; gap: 6px; margin-bottom: 20px; color: var(--accent); }
 .tp-stars svg { width: 26px; height: 26px; }
@@ -73,3 +73,5 @@
 }
 
 .ty-testimonial-note { display: block; margin-top: 10px; font-size: 11.5px; color: var(--text-muted); line-height: 1.4; }
+
+.ty-testimonial-title { font-family: var(--font-display); font-size: 14.5px; font-weight: 600; color: var(--text-primary); line-height: 1.35; margin: 0 0 6px; }
