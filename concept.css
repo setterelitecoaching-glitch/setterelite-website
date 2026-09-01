@@ -316,3 +316,29 @@ button.nav-cta, button.mobile-cta, button.btn { border: 0; cursor: pointer; font
 @media (max-width: 900px) {
     .nav-links li:not(:last-child) { display: none; }
 }
+
+/* ===== Footer 2.0 ===== */
+.f2 { border-top: 1px solid var(--border); background: var(--bg-secondary); padding: 64px 0 28px; }
+.f2-top { display: grid; grid-template-columns: 1.4fr 0.8fr 0.8fr; gap: 48px; align-items: start; }
+.f2-brand p { color: var(--text-secondary); font-size: 14.5px; max-width: 340px; margin: 16px 0 22px; line-height: 1.65; }
+.f2-socials { display: flex; gap: 10px; }
+.f2-social {
+    width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+    color: var(--text-secondary); border: 1px solid var(--border-strong); transition: var(--transition);
+}
+.f2-social:hover { color: var(--text-primary); border-color: var(--accent); }
+.f2-social svg { width: 18px; height: 18px; }
+.f2-heading { font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-primary); margin-bottom: 18px; }
+.f2-col { display: flex; flex-direction: column; gap: 12px; }
+.f2-col a { color: var(--text-secondary); font-size: 14.5px; transition: color 0.25s ease; }
+.f2-col a:hover { color: var(--text-primary); }
+.f2-cta-link { background: none; border: 0; padding: 0; text-align: left; cursor: pointer; color: var(--accent); font-size: 14.5px; font-weight: 600; font-family: var(--font); }
+.f2-cta-link:hover { color: var(--text-primary); }
+.f2-legal { margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--border); }
+.f2-legal p { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 4px; }
+.f2-bottom { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.f2-bottom p { font-size: 12px; color: var(--text-muted); }
+.f2-bottom-links { display: flex; gap: 22px; }
+.f2-bottom-links a { font-size: 12px; color: var(--text-muted); }
+.f2-bottom-links a:hover { color: var(--text-secondary); }
+@media (max-width: 800px) { .f2-top { grid-template-columns: 1fr; gap: 36px; } }
