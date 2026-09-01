@@ -129,10 +129,11 @@
         });
         var am = document.getElementById('aftermovieLink');
         if (am && am.getAttribute('href') === 'AFTERMOVIE_URL') { am.style.display = 'none'; }
-        var src = new URLSearchParams(location.search).get('src') || 'website';
-        src = src.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40) || 'website';
+        var qs = new URLSearchParams(location.search);
+        var bron = qs.get('s') || qs.get('src') || 'website';
+        bron = bron.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40) || 'website';
         document.querySelectorAll('[data-tf-widget], [data-tf-popup]').forEach(function (el) {
-            el.setAttribute('data-tf-hidden', 'source=' + src);
+            el.setAttribute('data-tf-hidden', 's=' + bron);
         });
         var s = document.createElement('script');
         s.src = 'https://embed.typeform.com/next/embed.js';
