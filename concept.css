@@ -237,3 +237,22 @@
 .nav-bedrijven:hover { color: var(--text-primary); }
 /* Popup-knoppen zijn buttons */
 button.nav-cta, button.mobile-cta, button.btn { border: 0; cursor: pointer; font-family: var(--font); }
+
+/* ===== Credibility strip (iconen boven cijfers) ===== */
+.cred-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    max-width: 1060px; margin: 10px auto 0; padding: 34px 12px;
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.cred-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+.cred-icon {
+    width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(46,155,238,0.25);
+    margin-bottom: 10px;
+}
+.cred-icon svg { width: 22px; height: 22px; }
+.cred-value { font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.cred-caption { font-size: 13.5px; color: var(--text-muted); }
+@media (max-width: 800px) {
+    .cred-strip { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+}
