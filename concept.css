@@ -256,3 +256,11 @@ button.nav-cta, button.mobile-cta, button.btn { border: 0; cursor: pointer; font
 @media (max-width: 800px) {
     .cred-strip { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
 }
+
+/* ===== Iconen op de verwachting-kaarten ===== */
+.sc-calltype-icon {
+    width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(46,155,238,0.25);
+    margin-bottom: 16px;
+}
+.sc-calltype-icon svg { width: 20px; height: 20px; }
