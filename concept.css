@@ -415,3 +415,9 @@ button.nav-cta, button.mobile-cta, button.btn { border: 0; cursor: pointer; font
 .exp-all { text-align: center; margin-top: 34px; }
 .exp-all a { color: var(--text-primary); font-weight: 600; font-size: 15px; }
 .exp-all a:hover { color: var(--accent); }
+
+/* ===== Screenshots onder een verhaal ===== */
+.person-screens { margin-top: 22px; }
+.person-screens-label { font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.person-screens-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.person-screens-row img { max-width: 300px; width: 100%; border-radius: 10px; border: 1px solid var(--border); }
