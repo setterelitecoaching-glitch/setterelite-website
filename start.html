@@ -129,5 +129,21 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+    document.querySelectorAll('video').forEach(function (v, i) {
+        var naam = (v.currentSrc || v.src || 'video-' + i).split('/').pop();
+        var gestart = false;
+        v.addEventListener('play', function () {
+            if (gestart || typeof gtag !== 'function') return;
+            gestart = true;
+            gtag('event', 'vsl_play', { video: naam, pagina: location.pathname });
+        });
+        v.addEventListener('ended', function () {
+            if (typeof gtag !== 'function') return;
+            gtag('event', 'vsl_complete', { video: naam, pagina: location.pathname });
+        });
+    });
+    </script>
 </body>
 </html>

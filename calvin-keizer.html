@@ -188,5 +188,19 @@
     })();
     </script>
     <script src="script.js"></script>
+
+    <script>
+    document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-tf-popup]');
+        if (!el || typeof gtag !== 'function') return;
+        var qs = new URLSearchParams(location.search);
+        var bron = (qs.get('s') || qs.get('src') || 'website').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40) || 'website';
+        gtag('event', 'typeform_open', {
+            form_id: el.getAttribute('data-tf-popup'),
+            bron: bron,
+            pagina: location.pathname
+        });
+    });
+    </script>
 </body>
 </html>
